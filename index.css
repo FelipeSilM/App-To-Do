@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: hsl(234, 39%, 85%);
+
+}
+
+/*html{
+    filter:invert(1)
+}*/
+
+body{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:50px 20px 0 20px;
+    background: linear-gradient( #0f0c29 ,#302b63, #24243e ) ;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow:hidden;
+}
+
+header{
+    margin-bottom:10px;
+}
+
+header h1{
+    font-size: 3rem;
+}
+
+header .entries{
+    display: flex;
+    height:40px;
+    margin-top: 40px;
+}
+
+header input{
+    width:100%;
+    height:100%;
+    background-color: hsl(235, 24%, 19%);
+    color:#fff;
+    border:0;
+    text-indent: 5px;
+}
+
+header button{
+    width: 50px;
+    background-color: hsl(235, 24%, 19%);
+    border:0;
+    border-left: 1px solid hsl(235, 21%, 11%);
+    
+}
+
+header button:active{
+    background-color: hsl(235, 21%, 11%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+main .tasks{
+    cursor: pointer;
+}
+
+main li{
+    margin-bottom: 2.5px;
+    transition: all 150ms ease-in-out;
+}
+
+main li:hover{
+    font-size: 18px
+}
+
+.delete{
+    align-self: flex-end;
+    margin-right: 15px;
+    border-bottom: 4px solid hsl(235, 21%, 11%);
+
+}
+
+.delete.off{
+    border-bottom: 4px solid hsl(234, 39%, 85%);   
+
+}
+
+@media (min-width: 1000px) {
+    .container{
+        width:700px;
+    }
+}
