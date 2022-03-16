@@ -59,8 +59,14 @@ addButton.onclick = () => {
     del.classList.add('on')
 }
 document.addEventListener("keypress", (e) => {
-    if (e.key === "Enter")
+    if (e.key === "Enter") {
+
         addTask()
+        lis = document.querySelectorAll('li')
+        markTask()
+        del.classList.remove('off')
+        del.classList.add('on')
+    }
 })
 
 window.onload = () => {
